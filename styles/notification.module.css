@@ -1,0 +1,195 @@
+/* styles/Notification.module.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.filterBtn.active {
+  background: #e091e0;
+  border-color: #e091e0;
+  color: white;
+}
+
+.notificationList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notificationCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+}
+
+.notificationCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notificationCard.read {
+  opacity: 0.8;
+  background: #f8f9fa;
+}
+
+.notificationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.titleWrapper h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.unreadDot {
+  width: 8px;
+  height: 8px;
+  background: #e091e0;
+  border-radius: 50%;
+}
+
+.date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.message {
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.notificationFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.categoryBadge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.categoryBadge.arrival { background: #e8f5e9; color: #2e7d32; }
+.categoryBadge.event { background: #e3f2fd; color: #1565c0; }
+.categoryBadge.success { background: #f3e5f5; color: #7b1fa2; }
+.categoryBadge.emergency { background: #ffebee; color: #c62828; }
+
+.priorityBadge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.high {
+  border-left-color: #ef5350;
+}
+
+.medium {
+  border-left-color: #fb8c00;
+}
+
+.normal {
+  border-left-color: #66bb6a;
+}
+
+.priorityBadge.high { background: #ffebee; color: #c62828; }
+.priorityBadge.medium { background: #fff3e0; color: #e65100; }
+.priorityBadge.normal { background: #e8f5e9; color: #2e7d32; }
+
+.markReadBtn {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #e091e0;
+  color: #e091e0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.markReadBtn:hover {
+  background: #e091e0;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .filters {
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .notificationHeader {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .date {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .notificationCard {
+    padding: 15px;
+  }
+
+  .notificationFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

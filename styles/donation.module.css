@@ -1,0 +1,201 @@
+/* styles/Donation.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.donationSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.donationCard {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.donationCard h2 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.amounts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.amountBtn {
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  background: transparent;
+  color: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.amountBtn.selected {
+  border-color: #e091e0;
+  background: #e091e0;
+  color: white;
+}
+
+.customAmount {
+  margin-bottom: 25px;
+}
+
+.customInput {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.customInput:focus {
+  outline: none;
+  border-color: #e091e0;
+}
+
+.donateBtn {
+  width: 100%;
+  padding: 15px;
+  background: #e091e0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.donateBtn:hover {
+  background: #d67ad6;
+}
+
+.donateBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.secureNote {
+  text-align: center;
+  color: #666;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.impactCard {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.impactCard h2 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.impactList {
+  list-style: none;
+  padding: 0;
+}
+
+.impactList li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.impactList li:last-child {
+  border-bottom: none;
+}
+
+.impactList span {
+  font-size: 1.5rem;
+}
+
+.impactList p {
+  color: #666;
+  margin: 0;
+}
+
+.bankSection {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.bankSection h2 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.bankDetails {
+  display: grid;
+  gap: 10px;
+}
+
+.bankDetails p {
+  color: #666;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .donationSection {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .amounts {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}

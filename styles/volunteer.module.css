@@ -1,0 +1,277 @@
+/* styles/Volunteer.module.css */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .hero {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('/images/volunteer/hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .heroContent h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .heroContent p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .whyVolunteer {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .reasonsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .reason {
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .reason:hover {
+    transform: translateY(-10px);
+  }
+  
+  .reasonIcon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .opportunities {
+    padding: 60px 20px;
+    background: #f8f9fa;
+  }
+  
+  .opportunitiesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .opportunityCard {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .opportunityCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .opportunityIcon {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  .opportunityImageWrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .opportunityImage {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .opportunityCard:hover .opportunityImage {
+    transform: scale(1.1);
+  }
+  
+  .requirements {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .requirementsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+  }
+  
+  .requirement {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .checkmark {
+    color: #4CAF50;
+    font-size: 1.5rem;
+  }
+  
+  .applicationSection {
+    padding: 60px 20px;
+    background: #f8f9fa;
+  }
+  
+  .applicationForm {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formGroup input:focus,
+  .formGroup select:focus,
+  .formGroup textarea:focus {
+    border-color: #e091e0;
+    outline: none;
+  }
+  
+  .checkboxGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .checkbox input {
+    width: auto;
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 15px;
+    background: #e091e0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background: #d67ad6;
+    transform: translateY(-2px);
+  }
+  
+  .submitButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .thankYouMessage {
+    text-align: center;
+    padding: 20px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: slideIn 0.5s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .reasonsGrid,
+    .opportunitiesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heroContent h1 {
+      font-size: 2.5rem;
+    }
+    
+    .formGrid,
+    .checkboxGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .requirementsList {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .reasonsGrid,
+    .opportunitiesGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero {
+      height: 300px;
+    }
+    
+    .heroContent h1 {
+      font-size: 2rem;
+    }
+  }

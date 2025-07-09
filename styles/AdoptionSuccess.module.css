@@ -1,0 +1,322 @@
+/* styles/AdoptionSuccess.module.css */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .successCard {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+  }
+  
+  .successCard.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .iconWrapper {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #e091e0 0%, #9c89b8 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+  }
+  
+  .checkmark {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease;
+    transition-delay: 0.2s;
+  }
+  
+  .checkmark.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .title {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .title.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+  }
+  
+  .message {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .message.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+  }
+  
+  .nextSteps {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .nextSteps.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+  }
+  
+  .nextSteps h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+  
+  .nextSteps ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nextSteps li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    color: #555;
+  }
+  
+  .nextSteps li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #e091e0;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .buttonWrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .buttonWrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .buttonWrapper:first-child.visible {
+    transition-delay: 0.6s;
+  }
+  
+  .buttonWrapper:last-child.visible {
+    transition-delay: 0.7s;
+  }
+  
+  .button {
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .button:first-child {
+    background: #e091e0;
+    color: white;
+  }
+  
+  .button:first-child:hover {
+    background: #d67ad6;
+    transform: translateY(-2px);
+  }
+  
+  .button.secondary {
+    background: transparent;
+    color: #666;
+    border: 2px solid #e0e0e0;
+  }
+  
+  .button.secondary:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+  }
+  
+  .contactInfo {
+    border-top: 2px solid #f0f0f0;
+    padding-top: 30px;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .contactInfo.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+  }
+  
+  .contactInfo p {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .contactLink {
+    display: block;
+    color: #e091e0;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .contactLink:hover {
+    color: #d67ad6;
+  }
+  
+  .confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .confettiPiece {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: #e091e0;
+    top: -20px;
+    left: var(--x);
+    transform: rotate(var(--rotation));
+    opacity: 0;
+    animation: confettiFall 5s linear infinite;
+    animation-delay: var(--delay);
+  }
+  
+  .confettiPiece:nth-child(2n) {
+    background: #9c89b8;
+  }
+  
+  .confettiPiece:nth-child(3n) {
+    background: #f0a6ca;
+  }
+  
+  .confettiPiece:nth-child(4n) {
+    background: #b8bedd;
+  }
+  
+  @keyframes confettiFall {
+    0% {
+      transform: translateY(0) rotate(var(--rotation));
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(calc(var(--rotation) + 360deg));
+      opacity: 0;
+    }
+  }
+  
+  /* Slide Up Animation */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Scale Animation */
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+    }
+  
+    .button {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .successCard {
+      padding: 30px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .iconWrapper {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .checkmark {
+      font-size: 40px;
+    }
+  }

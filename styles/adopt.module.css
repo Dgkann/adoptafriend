@@ -1,0 +1,167 @@
+/* styles/Adopt.module.css */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #e091e0 0%, #9c89b8 100%);
+    margin: -20px -20px 40px;
+    color: white;
+  }
+  
+  .searchSection {
+    margin-bottom: 40px;
+  }
+  
+  .searchBar {
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    font-size: 1rem;
+  }
+  
+  .filterButtons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .filterBtn {
+    padding: 10px 20px;
+    border: 2px solid #e091e0;
+    background: transparent;
+    color: #e091e0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filterBtn.active {
+    background: #e091e0;
+    color: white;
+  }
+  
+  .petsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .petCard {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .petCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .petImageWrapper {
+    position: relative;
+    padding-top: 100%;
+  }
+  
+  .petImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .petType {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(224, 145, 224, 0.9);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .petInfo {
+    padding: 20px;
+  }
+  
+  .breed {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .petDetails {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  .description {
+    margin-bottom: 20px;
+  }
+  
+  .adoptButton {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #e091e0;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .adoptButton:hover {
+    background: #d67ad6;
+    transform: translateY(-2px);
+  }
+  
+  .adoptInfo {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .processSteps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .step {
+    padding: 20px;
+  }
+  
+  .stepNumber {
+    width: 40px;
+    height: 40px;
+    background: #e091e0;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .processSteps {
+      grid-template-columns: 1fr;
+    }
+  }

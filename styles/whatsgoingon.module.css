@@ -1,0 +1,167 @@
+/* styles/WhatsGoingOn.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterBtn.active {
+  background: #f0f0f0;
+  border-color: #ccc;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+/* News Styles */
+.newsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.newsCard {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.newsImage {
+  position: relative;
+  height: 200px;
+}
+
+.newsImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.newsTag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.update { color: #2196F3; }
+.success { color: #4CAF50; }
+
+.newsContent {
+  padding: 15px;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.newsContent h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.content {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.readMoreBtn {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.readMoreBtn:hover {
+  background: #f0f0f0;
+}
+
+/* Updates Styles */
+.updatesList {
+  display: grid;
+  gap: 15px;
+}
+
+.updateCard {
+  padding: 15px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  border-left: 4px solid #ddd;
+}
+
+.updateCard.high {
+  border-left-color: #dc3545;
+  background: #fff5f5;
+}
+
+.updateCard h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.updateContent p {
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .filterButtons {
+    flex-wrap: wrap;
+  }
+
+  .newsList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,134 @@
+/* styles/AdoptionForm.module.css */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .formProgress {
+    margin-bottom: 40px;
+  }
+  
+  .progressBar {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background: #e091e0;
+    transition: width 0.3s ease;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .step {
+    flex: 1;
+    text-align: center;
+    color: #666;
+  }
+  
+  .step.active {
+    color: #e091e0;
+    font-weight: bold;
+  }
+  
+  .adoptionForm {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .formStep {
+    margin-bottom: 30px;
+  }
+  
+  .formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formGroup input:focus,
+  .formGroup select:focus,
+  .formGroup textarea:focus {
+    border-color: #e091e0;
+    outline: none;
+  }
+  
+  .formNavigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .prevButton,
+  .nextButton,
+  .submitButton {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .prevButton {
+    background: #f0f0f0;
+    color: #666;
+  }
+  
+  .nextButton,
+  .submitButton {
+    background: #e091e0;
+    color: white;
+  }
+  
+  .prevButton:hover {
+    background: #e0e0e0;
+  }
+  
+  .nextButton:hover,
+  .submitButton:hover {
+    background: #d67ad6;
+    transform: translateY(-2px);
+  }
+  
+  .submitButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  @media (max-width: 768px) {
+    .formGrid {
+      grid-template-columns: 1fr;
+    }
+  }
